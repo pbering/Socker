@@ -2,12 +2,19 @@
 
 Is is now possible to run Sitecore completely in Docker, you don't have to mess around with databases, IIS or anything, you don't even have to have SQL Server or IIS installed.
  
-This repository shows how a solution running Sitecore is wired up for development with the flowwing features:
+This repository shows how a solution running Sitecore is wired up for development with the following features:
 
 - Databases is persisted between restarts
 - Project output are automatically synced into running containers when changes are detected
 - Load balancing multiple Sitecore instances
 - Streaming log output
+
+So why develop Sitecore solutions with Docker?
+
+- Getting a solutions up and running is very fast
+- Isolate dependecies and versions (like Mongo, Solr) used for each solution without polluting your workstation
+- Minimize disk space usage, you only have 1 copy of each Sitecore version as a Docker images
+- Potentially run your code inside the *same* container locally as in production 
 
 ## Prerequisites
 
