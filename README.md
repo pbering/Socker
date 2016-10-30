@@ -1,6 +1,6 @@
 # Socker = Sitecore :heart: Docker
 
-Is is now possible to run Sitecore completely in Docker, you don't have to mess around with databases, IIS or anything, you don't even have to have SQL Server or IIS installed.
+Is is now possible to run Sitecore completely in Docker natively, you don't have to mess around with databases, IIS or anything, you don't even have to have SQL Server or IIS installed on your machine.
  
 This repository shows how a solution running Sitecore is wired up for development with the following features:
 
@@ -11,8 +11,8 @@ This repository shows how a solution running Sitecore is wired up for developmen
 
 So why develop Sitecore solutions with Docker?
 
-- Getting a solutions up and running is very fast
-- Isolate dependecies and versions (like Mongo, Solr) used for each solution without polluting your workstation
+- Getting solutions up and running is very fast
+- Isolate dependecies and versions (like Mongo, Solr, Windows patches) used for each solution without polluting your machine
 - Minimize disk space usage, you only have 1 copy of each Sitecore version as a Docker images
 - Potentially run your code inside the *same* container locally as in production 
 
@@ -22,7 +22,7 @@ So why develop Sitecore solutions with Docker?
 2. Docker for Windows v1.12.3-beta29.2 or later (beta channel: [https://download.docker.com/win/beta/InstallDocker.msi]())
 3. Docker Compose 1.9.0-rc2 or later (latest: [https://ci.appveyor.com/project/docker/compose]())
 
-## Preperations
+## Preparing base images
 
 1. Place Sitecore "Data" and "Website" folders in `/docker/sitecore-*/Sitecore`
 2. Place "license.xml" in `/docker/sitecore-*/Sitecore/Data`
@@ -32,6 +32,7 @@ So why develop Sitecore solutions with Docker?
 docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
 docker build -t traefik:win .\docker\traefik-win
 ````
+4. [OPTIONAL] Push images to private Docker repository to share them within your enterprise
 
 ## Usage
 
