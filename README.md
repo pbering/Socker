@@ -1,4 +1,4 @@
-# Sitecore :heart: Docker = Socker
+# Socker = Sitecore :heart: Docker
 
 Is is now possible to run Sitecore completely in Docker, you don't have to mess around with databases, IIS or anything, you don't even have to have SQL Server or IIS installed.
  
@@ -12,8 +12,8 @@ This repository shows how a solution running Sitecore is wired up for developmen
 ## Prerequisites
 
 1. Windows 10 Anniversary update with latest updates
-2. Docker for Windows v1.12.3-beta29.2 or later
-3. Docker Compose 1.9.0-rc2 or later (Get it from [https://ci.appveyor.com/project/docker/compose](https://ci.appveyor.com/project/docker/compose))
+2. Docker for Windows v1.12.3-beta29.2 or later (beta channel: [https://download.docker.com/win/beta/InstallDocker.msi]())
+3. Docker Compose 1.9.0-rc2 or later (latest: [https://ci.appveyor.com/project/docker/compose]())
 
 ## Preperations
 
