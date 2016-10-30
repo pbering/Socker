@@ -7,7 +7,7 @@ namespace WebApp.Processors
     {
         public override void Process(HttpRequestArgs args)
         {
-            args.Context.Response.Write($"<h1>Hello: {Environment.MachineName}</h1>");
+            args.Context.Response.Write($"<h1>Hello {Environment.MachineName}</h1>");
         }
     }
 }

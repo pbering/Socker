@@ -1,6 +1,13 @@
 # Sitecore :heart: Docker = Socker
 
-...
+Is is now possible to run Sitecore completely in Docker, you don't have to mess around with databases, IIS or anything, you don't even have to have SQL Server or IIS installed.
+ 
+This repository shows how a solution running Sitecore is wired up for development with the flowwing features:
+
+- Databases is persisted between restarts
+- Project output are automatically synced into running containers when changes are detected
+- Load balancing multiple Sitecore instances
+- Streaming log output
 
 ## Prerequisites
 
@@ -11,7 +18,7 @@
 ## Preperations
 
 1. Place Sitecore "Data" and "Website" folders in `/docker/sitecore-*/Sitecore`
-2. Place license.xml in `/docker/sitecore-*/Sitecore/Data`
+2. Place "license.xml" in `/docker/sitecore-*/Sitecore/Data`
 3. Build private images:
 
 ````
@@ -36,5 +43,6 @@ docker-compose up
 ````
 docker-compose down
 ````
+>TIP: You can attach to the web containers to see all output from Sitecore logs with `docker exec socker_web_1 powershell C:/Sitecore/UDP.ps1`
 
->TIP: You can try running multiple Sitecore instances behind a load balancer with `docker-compose up --file .\docker-compose.scale.yml`
+>TIP: You can start multiple Sitecore instances behind a load balancer with `docker-compose --file .\docker-compose.scale.yml up`
