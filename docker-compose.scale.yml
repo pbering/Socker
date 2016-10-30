@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+ db:
+  image: microsoft/mssql-server-2016-express-windows
+  volumes:
+   - .\data:C:\Data 
+  environment:
+   sa_password: Docker+Sitecore!
+   attach_dbs: "[{'dbName':'Sitecore_Core','dbFiles':['C:\\\\Data\\\\Sitecore.Core.mdf','C:\\\\Data\\\\Sitecore.Core.ldf']},{'dbName':'Sitecore_Master','dbFiles':['C:\\\\Data\\\\Sitecore.Master.mdf', 'C:\\\\Data\\\\Sitecore.Master.ldf']},{'dbName': 'Sitecore_Web', 'dbFiles': ['C:\\\\Data\\\\Sitecore.Web.mdf','C:\\\\Data\\\\Sitecore.Web.ldf']},{'dbName':'Sitecore_Analytics','dbFiles':['C:\\\\Data\\\\Sitecore.Analytics.mdf','C:\\\\Data\\\\Sitecore.Analytics.ldf']}]"   
+  
+ web1:
+  build: .\docker\web
+  volumes:
+   - .\src\WebApp:C:\Workspace
+  links: 
+   - db
+  environment:
+   sa_password: Docker+Sitecore!
+   sql_server: db
+
+ web2:
+  build: .\docker\web
+  volumes:
+   - .\src\WebApp:C:\Workspace
+  links: 
+   - db
+  environment:
+   sa_password: Docker+Sitecore!
+   sql_server: db
+
+ lb:
+  image: traefik:win
+  links:
+   - web1
+   - web2
+
+networks:
+ default:
+  external:
+   name: "nat"
