@@ -1,4 +1,5 @@
 ﻿using System;
+using Sitecore;
 using Sitecore.Pipelines.HttpRequest;
 
 namespace WebApp.Processors
@@ -7,7 +8,10 @@ namespace WebApp.Processors
     {
         public override void Process(HttpRequestArgs args)
         {
-            args.Context.Response.Write($"<h1>Hello {Environment.MachineName}</h1>");
+            if (Context.Site.Name.Equals("website", StringComparison.OrdinalIgnoreCase))
+            {
+                args.Context.Response.Write($"<h1>Hello {Environment.MachineName}</h1>");
+            }
         }
     }
 }

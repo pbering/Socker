@@ -59,7 +59,7 @@ try
         $color = @{ $true = [ConsoleColor]::Green; $false = $colors[$level] }[$level -eq "INFO" -and $message -match "AUDIT"]
            
         Write-Host ("[{0, -$widestName}] " -f $name) -NoNewline -ForegroundColor Gray
-        Write-Host ("{0} " -f $time.ToLongTimeString()) -NoNewline -ForegroundColor Gray
+        Write-Host ("{0} " -f $time.ToString("s")) -NoNewline -ForegroundColor Gray
         Write-Host ("[{0}] " -f $levels[$level]) -NoNewline -ForegroundColor $color
         Write-Host ("[{0, -$widestThread}] " -f $thread) -NoNewline -ForegroundColor $color
         Write-Host ("{0}: " -f $logger) -NoNewline -ForegroundColor Gray
