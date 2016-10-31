@@ -18,15 +18,18 @@ $levels = @{"ERROR" = "ERR";
 $widestName = $null
 $widestThread = $null
 
-# Check if already running and kill process
-Get-NetUdpEndpoint -LocalPort $port -ErrorAction SilentlyContinue | % {
-    Stop-Process -Id $_.OwningProcess -Force
+Get-NetUDPEndpoint -LocalPort $port -ErrorAction SilentlyContinue | % {
+    Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue
 }
 
 try 
 {
+    Write-Host "Connecting..."
+
     $endpoint = New-Object Net.IPEndPoint ([IPAddress]::Any, $port)
     $client = New-Object Net.Sockets.UdpClient $port
+    
+    Write-Host "Connected, waiting on data..."
     
     while($true)  
     {
