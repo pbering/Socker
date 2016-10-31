@@ -27,11 +27,13 @@ So why develop Sitecore solutions with Docker?
 1. Place Sitecore "Data" and "Website" folders in `/docker/sitecore-*/Sitecore`
 2. Place "license.xml" in `/docker/sitecore-*/Sitecore/Data`
 3. Build private images:
+	
 	````
 	docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
 	docker build -t traefik:win .\docker\traefik-win
 	````
-7. [OPTIONAL] Push images to private Docker repository to share them within your enterprise
+
+4. [OPTIONAL] Push images to private Docker repository to share them within your enterprise
 
 ## Usage
 
