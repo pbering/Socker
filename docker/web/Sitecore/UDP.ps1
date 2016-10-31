@@ -3,17 +3,25 @@ $ErrorActionPreference = "STOP"
 
 $splitString = " @@@ "
 $port = 9000
-$colors = @{"ERROR" = [ConsoleColor]::Red;            "FATAL" = [ConsoleColor]::Red;
+$colors = @{"ERROR" = [ConsoleColor]::Red;
+            "FATAL" = [ConsoleColor]::Red;
             "DEBUG" = [ConsoleColor]::White; 
             "WARN" = [ConsoleColor]::Yellow;
             "INFO" = [ConsoleColor]::Gray; }
-$levels = @{"ERROR" = "ERR";            "FATAL" = "FTL";
+
+$levels = @{"ERROR" = "ERR";
+            "FATAL" = "FTL";
             "DEBUG" = "DBG";
             "WARN" = "WRN";
             "INFO" = "NFO";}
 
 $widestName = $null
 $widestThread = $null
+
+# Check if already running and kill process
+Get-NetUdpEndpoint -LocalPort $port -ErrorAction SilentlyContinue | % {
+    Stop-Process -Id $_.OwningProcess -Force
+}
 
 try 
 {
