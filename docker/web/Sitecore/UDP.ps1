@@ -56,7 +56,7 @@ try
         $widestName = @{ $true = $name.Length; $false = $widestName }[$name.Length -gt $widestName]
         $widestThread = @{ $true = $thread.Length; $false = $widestThread }[$thread.Length -gt $widestThread]               
         $color = @{ $true = [ConsoleColor]::Green; $false = $colors[$level] }[$level -eq "INFO" -and $message -match "AUDIT"]
-           
+        
         Write-Host ("[{0, -$widestName}] " -f $name) -NoNewline -ForegroundColor Gray
         Write-Host ("{0} " -f $time.ToString("s")) -NoNewline -ForegroundColor Gray
         Write-Host ("[{0}] " -f $levels[$level]) -NoNewline -ForegroundColor $color

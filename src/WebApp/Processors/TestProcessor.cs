@@ -8,7 +8,7 @@ namespace WebApp.Processors
     {
         public override void Process(HttpRequestArgs args)
         {
-            if (Context.Site.Name.Equals("website", StringComparison.OrdinalIgnoreCase))
+            if (Context.Site != null && Context.Site.Name.Equals("website", StringComparison.OrdinalIgnoreCase))
             {
                 args.Context.Response.Write($"<h1>Hello {Environment.MachineName}</h1>");
             }
