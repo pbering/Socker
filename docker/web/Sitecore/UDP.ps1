@@ -24,12 +24,8 @@ Get-NetUDPEndpoint -LocalPort $port -ErrorAction SilentlyContinue | % {
 
 try 
 {
-    Write-Host "Connecting..."
-
     $endpoint = New-Object Net.IPEndPoint ([IPAddress]::Any, $port)
     $client = New-Object Net.Sockets.UdpClient $port
-    
-    Write-Host "Connected, waiting on data..."
     
     while($true)  
     {
