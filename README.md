@@ -22,20 +22,23 @@ So why develop Sitecore solutions with Docker?
 2. Docker for Windows v1.12.3-beta29.2 or later (beta channel: [https://download.docker.com/win/beta/InstallDocker.msi](https://download.docker.com/win/beta/InstallDocker.msi))
 3. Docker Compose 1.9.0-rc2 or later (latest: [https://ci.appveyor.com/project/docker/compose](https://ci.appveyor.com/project/docker/compose))
 
-## Preparing base images
+## Preparations
+
+### Base images
 
 1. Place Sitecore "Data" and "Website" folders in `/docker/sitecore-*/Sitecore`
-2. Place "license.xml" in `/docker/sitecore-*/Sitecore/Data`
-3. Build private images:
+2. Build private images:
 	
 	````
 	docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
 	docker build -t traefik:win .\docker\traefik-win
 	````
+### Solution
 
-4. [OPTIONAL] Push images to private Docker repository to share them within your enterprise
+1. Place "license.xml" in `/docker/web/Sitecore/Data`
+2. Place Sitecore databases in `/data`
 
-## Usage
+## Daily usage
 
 - Start containers:
 
@@ -43,15 +46,15 @@ So why develop Sitecore solutions with Docker?
 docker-compose build
 docker-compose up
 ````
+
 - Open IP of web container in browser (IP is in the compose output)
 - Open Socker.sln.
 	- Add files, edit code, build - watcher script updates the running containers.
 	- Refresh browser, repeat...
-- When you're done:
+- When you're done, press CTRL+C to stop
 
-````
-docker-compose down
-````
->TIP: You can attach to the web containers to see all output from Sitecore logs with `docker exec socker_web_1 powershell C:/Sitecore/UDP.ps1`
+If you do not care about the output from containers you can start in "detached" mode with `docker-compose up -d` and then use `docker-compose stop` or `docker-compose down` to remove everything. 
+
+>TIP: You can attach to the web containers to watch output from Sitecore logs with `docker exec socker_web_1 powershell C:/Sitecore/UDP.ps1`
 
 >TIP: You can start multiple Sitecore instances behind a load balancer with `docker-compose --file .\docker-compose.scale.yml up`
