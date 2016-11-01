@@ -33,6 +33,7 @@ So why develop Sitecore solutions with Docker?
 	docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
 	docker build -t traefik:win .\docker\traefik-win
 	````
+	
 ### Solution
 
 1. Place "license.xml" in `/docker/web/Sitecore/Data`
