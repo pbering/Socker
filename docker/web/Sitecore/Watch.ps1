@@ -51,7 +51,7 @@ function Sync
                
                 Copy-Item -Path $sourcePath -Destination $targetPath -Force
                
-                Write-Output ("{0}: {1, -9} -> {2, -9}" -f [DateTime]::Now.ToString("s"), $triggerReason, ($sourcePath.Replace("$Path\", "")))
+                Write-Output ("{0}: {1, -9} -> {2, -9}" -f [DateTime]::Now.ToString("HH:mm:ss:fff"), $triggerReason, ($sourcePath.Replace("$Path\", "")))
             }
         }
     }   

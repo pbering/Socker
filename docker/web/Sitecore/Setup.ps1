@@ -13,4 +13,4 @@ Write-Host ("{0}: Updated '{1}'." -f [DateTime]::Now.ToString("s"), $cfgPath)
 $ip =  Get-NetAdapter | select -First 1 | Get-NetIPAddress | ? { $_.AddressFamily -eq "IPv4"} | select -Property IPAddress |  % { $_.IPAddress }
 
 # Ready
-Write-Host ("{0}: Container IP {1}" -f [DateTime]::Now.ToString("s"), $ip)
+Write-Host ("{0}: Container IP {1}" -f [DateTime]::Now.ToString("HH:mm:ss:fff"), $ip)
