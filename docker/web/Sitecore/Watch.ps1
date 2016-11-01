@@ -59,7 +59,7 @@ function Sync
 
 $Destination = $Destination.TrimEnd("\")
 
-Write-Host ("{0}: Warming up..." -f [DateTime]::Now.ToString("s"))
+Write-Host ("{0}: Warming up..." -f [DateTime]::Now.ToString("HH:mm:ss:fff"))
 
 # Initial sync
 Sync | Out-Null
@@ -74,7 +74,7 @@ catch
     # OK    
 }
 
-Write-Host ("{0}: Watching '{1}' for changes, will copy to '{2}' while ignoring '{3}'." -f [DateTime]::Now.ToString("s"), $Path, $Destination, ($Ignore -join ", "))
+Write-Host ("{0}: Watching '{1}' for changes, will copy to '{2}' while ignoring '{3}'." -f [DateTime]::Now.ToString("HH:mm:ss:fff"), $Path, $Destination, ($Ignore -join ", "))
 
 # Start            
 while($true)
