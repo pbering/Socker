@@ -11,7 +11,7 @@ This repository shows how a solution running Sitecore is wired up for developmen
 
 So why develop Sitecore solutions with Docker?
 
-- Getting solutions up and running is very fast
+- Getting complete solutions up and running is *very* fast
 - Isolate dependecies and versions (like Mongo, Solr, Windows patches) used for each solution without polluting your machine
 - Minimize disk space usage, you only have 1 copy of each Sitecore version as a Docker images
 - Potentially run your code inside the *same* container locally as in production 
