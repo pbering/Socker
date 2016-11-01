@@ -1,1 +1,1 @@
-Place Sitecore database mdf/ldf files here.
+Place content of a Sitecore "Databases" folder here.
