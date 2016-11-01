@@ -1,1 +1,1 @@
-Place content of a Sitecore "Databases" folder here.
+Place Sitecore databases here.

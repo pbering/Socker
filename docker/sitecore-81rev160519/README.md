@@ -1,1 +1,0 @@
-Place content of a Sitecore "Website" folder here.

@@ -1,1 +1,1 @@
-Place Sitecore license.xml file here.
+Place Sitecore "license.xml" file here.
