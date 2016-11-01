@@ -26,7 +26,7 @@ So why develop Sitecore solutions with Docker?
 
 ### Base images
 
-1. Place Sitecore "Data" and "Website" folders in `/docker/sitecore-*/Sitecore`
+1. Place Sitecore "Data" and "Website" folders in `/docker/sitecore-*/Sitecore`.
 2. Build private images:
 	
 	````
@@ -36,8 +36,8 @@ So why develop Sitecore solutions with Docker?
 	
 ### Solution
 
-1. Place "license.xml" in `/docker/web/Sitecore/Data`
-2. Place Sitecore databases in `/data`
+1. Place "license.xml" in `/docker/web/Sitecore/Data`.
+2. Place Sitecore databases in `/data`.
 
 ## Daily usage
 
