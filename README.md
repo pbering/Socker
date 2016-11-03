@@ -25,7 +25,7 @@ So why develop Sitecore solutions with Docker?
 
 ### Base images
 
-1. Place Sitecore "Data" and "Website" folders in `/docker/sitecore-*/Sitecore`
+1. Extract "Data" and "Website" from "Sitecore 8.1 rev. 160519.zip" and place them in `/docker/sitecore-81rev160519/Sitecore`
 2. Build private images:
 	
 ````
