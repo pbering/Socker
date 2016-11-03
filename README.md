@@ -19,8 +19,7 @@ So why develop Sitecore solutions with Docker?
 ## Prerequisites
 
 1. Windows 10 Anniversary update with latest updates
-2. Docker for Windows v1.12.3-beta29.2 or later (beta channel: [https://download.docker.com/win/beta/InstallDocker.msi](https://download.docker.com/win/beta/InstallDocker.msi))
-3. Docker Compose 1.9.0-rc2 or later (latest: [https://ci.appveyor.com/project/docker/compose](https://ci.appveyor.com/project/docker/compose))
+2. Docker for Windows v1.12.3-beta29.3 or later (beta channel: [https://download.docker.com/win/beta/InstallDocker.msi](https://download.docker.com/win/beta/InstallDocker.msi))
 
 ## Preparations
 
