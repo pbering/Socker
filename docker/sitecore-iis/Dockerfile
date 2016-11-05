@@ -7,7 +7,7 @@ RUN Add-WindowsFeature Web-Server; \
     Add-WindowsFeature Web-Asp-Net45; \
     Set-Itemproperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters' -Name ServerPriorityTimeLimit -Value 0 -Type DWord;
 
-ADD /Sitecore /Sitecore
+ADD Sitecore/ /Sitecore
 
 RUN Import-Module IISAdministration; \        
     Import-Module WebAdministration; \
