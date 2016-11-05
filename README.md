@@ -26,10 +26,13 @@ So why develop Sitecore solutions with Docker?
 ### Base images
 
 1. Extract "Data" and "Website" from "Sitecore 8.1 rev. 160519.zip" and place them in `/docker/sitecore-81rev160519/Sitecore`
-2. Build private images:
+2. Extract "Data" and "Website" from "Sitecore 8.2 rev. 160729.zip" and place them in `/docker/sitecore-82rev160729/Sitecore`
+3. Build private images:
 	
 ````
+docker build -t sitecore-iis .\docker\sitecore-iis
 docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
+docker build -t sitecore:8.2.160729 .\docker\sitecore-82rev160729
 docker build -t traefik:win .\docker\traefik-win
 ````
 	
@@ -47,7 +50,7 @@ docker-compose build
 docker-compose up
 ````
 
-- Open IP of web container in browser (IP is in the compose output)
+- Open IP of web container in browser (IP is in the compose output or use `docker inspect`)
 - Open Socker.sln.
 	- Add files, edit code, build - watcher script updates the running containers.
 	- Refresh browser, repeat...
@@ -55,6 +58,6 @@ docker-compose up
 
 If you do not care about the output from containers you can start in "detached" mode with `docker-compose up -d` and then use `docker-compose stop` or `docker-compose down` to remove everything. 
 
->TIP: You can attach to the web containers to watch output from Sitecore logs with `docker exec socker_web_1 powershell C:/Sitecore/UDP.ps1`
+>TIP: You can attach to the web containers to watch output from Sitecore logs with `docker exec socker_web_1 powershell C:/Sitecore/Scripts/Stream-Log.ps1`
 
 >TIP: You can start multiple Sitecore instances behind a load balancer with `docker-compose --file .\docker-compose.scale.yml up`
