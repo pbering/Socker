@@ -52,7 +52,7 @@ If you do not care about the output from containers you can start in "detached" 
 - Add files, edit code, build - watcher script updates the running containers...
 	- Refresh browser, repeat...
 
-### 3. Logs
+#### Logs
 
 You can attach to the web containers to watch output from Sitecore logs:
 
@@ -60,7 +60,7 @@ You can attach to the web containers to watch output from Sitecore logs:
 docker exec socker_web_1 powershell C:/Sitecore/Scripts/Stream-Log.ps1
 ````
 
-### 4. Debugging
+#### Debugging
 
 1. Open **Debug -> Attach to Process**
 2. Click **Find** and select container under **Auto detected**
