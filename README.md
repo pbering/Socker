@@ -23,11 +23,11 @@ So why develop Sitecore solutions with Docker?
 
 ## Preparations
 
->NOTE: Base images are build locally in this example, but in a real life senario you would also push to an remote private repository like 
+>NOTE: Base images are build and consumed locally in this example, but in a real life senario you would also push to an remote private repository like 
 hub.docker.com, quay.io or an internal one so images can be shared within your organization.
 Unfortunately it has to be **private** repositories due to Sitecore licensing terms so we can't share images in the community.
 
-#### Using Sitecore v8.1 rev. 160519
+### Using Sitecore v8.1 rev. 160519
 
 1. Extract "Data" and "Website" from "Sitecore 8.1 rev. 160519.zip" and place them in `/docker/sitecore-81rev160519/Sitecore`
 2. Build private images:
@@ -40,9 +40,7 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 3. Place "license.xml" in `/docker/web/Sitecore/Data`
 4. Place databases from "Sitecore 8.1 rev. 160519.zip" in `/data`
 
-<details>
- <summary>**[OPTIONAL] Using another Sitecore version**</summary>
- <p>
+### [OPTIONAL] Using another Sitecore version
 
 1. Extract "Data" and "Website" from "SSitecore 8.2 rev. 160729.zip" and place them in `/docker/sitecore-82rev160729/Sitecore`
 2. Build private images:
@@ -55,12 +53,7 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 4. Replace "/src/WebApp/Web.config" with the Web.config from "Sitecore 8.2 rev. 160729.zip"
 5. Place databases from "Sitecore 8.2 rev. 160729.zip" in `/data`
 
- </p>
-</details>
-
-<details>
- <summary>**[OPTIONAL] Multiple Sitecore instances, load balanced**</summary>
- <p>
+### [OPTIONAL] Multiple Sitecore instances, load balanced
 
 If you want to try out an loadbalanced environment you should also build:
 
@@ -69,8 +62,6 @@ docker build -t traefik:win .\docker\traefik-win
 ````
 
 You can then use `docker-compose --file .\docker-compose.scale.yml up` to start your containers.
- </p>
-</details>
 
 ## Daily usage
 
