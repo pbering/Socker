@@ -48,11 +48,11 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 	- Open IP of web container in browser (IP is in the compose output or use `docker inspect`).
 	- Add files, edit code, build - watcher script updates the running containers...
 		- Refresh browser, repeat...
-	- To debug:
-		1. Open **Debug -> Attach to Process**
-		2. Click **Find** and select container under **Auto detected**
-		3. Select the **w3wp.exe** process
-		4. Click **Attach**
+- To debug:
+	1. Open **Debug -> Attach to Process**
+	2. Click **Find** and select container under **Auto detected**
+	3. Select the **w3wp.exe** process
+	4. Click **Attach**
 - When you're done, press CTRL+C to stop.
 
 If you do not care about the output from containers you can start in "detached" mode with `docker-compose up -d` and then use `docker-compose stop` or `docker-compose down` to remove everything. 
