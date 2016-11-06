@@ -32,10 +32,10 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 1. Extract "Data" and "Website" from "Sitecore 8.1 rev. 160519.zip" and place them in `/docker/sitecore-81rev160519/Sitecore`
 2. Build private images:
 	
-````
-docker build -t sitecore-iis .\docker\sitecore-iis
-docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
-````
+	````
+	docker build -t sitecore-iis .\docker\sitecore-iis
+	docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
+	````
 
 #### [OPTIONAL] Using another Sitecore version
 
@@ -49,7 +49,7 @@ docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
 3. Change the version number in the FROM statement in "/docker/web/Dockerfile"
 4. Replace "/src/WebApp/Web.config" with the Web.config from "SSitecore 8.2 rev. 160729.zip"
 
-#### [OPTIONAL] Using Traefik load balancer
+#### [OPTIONAL] Using load balancer
 
 If you want to try out an loadbalanced environment you should also build:
 
@@ -57,7 +57,7 @@ If you want to try out an loadbalanced environment you should also build:
 docker build -t traefik:win .\docker\traefik-win
 ````
 
-Then you can use `docker-compose --file .\docker-compose.scale.yml up` to start your containers.
+You can then use `docker-compose --file .\docker-compose.scale.yml up` to start your containers.
 
 ### Solution
 
@@ -68,10 +68,10 @@ Then you can use `docker-compose --file .\docker-compose.scale.yml up` to start 
 
 - Start containers:
 
-````
-docker-compose build
-docker-compose up
-````
+	````
+	docker-compose build
+	docker-compose up
+	````
 
 - Open IP of web container in browser (IP is in the compose output or use `docker inspect`)
 - Open Socker.sln.
