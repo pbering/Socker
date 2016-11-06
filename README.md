@@ -1,7 +1,7 @@
 # Socker = Sitecore :heart: Docker
 
 Is is now possible to run Sitecore completely in Docker natively, you don't have to mess around with databases, IIS or anything, you don't even have to have SQL Server or IIS installed on your machine.
- 
+
 This repository shows how a solution running Sitecore is wired up for development with the following features:
 
 - Databases is persisted between restarts
