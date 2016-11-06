@@ -1,1 +1,0 @@
-Place Sitecore "Data" and "Website" folder here.
