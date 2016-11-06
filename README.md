@@ -36,7 +36,7 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 
 ## Daily usage
 
-### 1. Start containers
+### Start containers
 
 ````
 docker-compose build
@@ -45,7 +45,7 @@ docker-compose up
 
 If you do not care about the output from containers you can start in "detached" mode with `docker-compose up -d` and then use `docker-compose stop` or `docker-compose down` to remove everything. 
 
-### 2. Open solution
+### Open solution
 
 - Build
 - Browse the IP of web container (IP is in the compose output or use `docker inspect`).
