@@ -41,7 +41,7 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 4. Place databases from "Sitecore 8.1 rev. 160519.zip" in `/data`
 
 
-<details><summary>#### [OPTIONAL] Using another Sitecore version</summary>
+<details><summary>**[OPTIONAL] Using another Sitecore version**</summary>
 <p>
 sss
 
