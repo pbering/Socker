@@ -24,7 +24,7 @@ So why develop Sitecore solutions with Docker?
 ## Preparations
 
 >NOTE: Base images are build and consumed locally in this example, but in a real life senario you would also push to an remote private repository like 
-hub.docker.com, quay.io or an internal one so images can be shared within your organization.
+hub.docker.com, quay.io or an internal one, so images can be shared within your organization.
 Unfortunately it has to be **private** repositories due to Sitecore licensing terms so we can't share images in the community.
 
 ### Using Sitecore v8.1 rev. 160519
