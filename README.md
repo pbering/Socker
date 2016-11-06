@@ -6,6 +6,7 @@ This repository shows how a solution running Sitecore is wired up for developmen
 
 - Databases is persisted between restarts
 - Project output are automatically synced into running containers when changes are detected
+- Remote debugging
 - Streaming log output
 - Load balancing multiple Sitecore instances
 
@@ -42,10 +43,16 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 	docker-compose up
 	````
 
-- Open IP of web container in browser (IP is in the compose output or use `docker inspect`).
 - Open Socker.sln:
+	- Build
+	- Open IP of web container in browser (IP is in the compose output or use `docker inspect`).
 	- Add files, edit code, build - watcher script updates the running containers...
-	- Refresh browser, repeat...
+		- Refresh browser, repeat...
+	- To debug:
+		1. Open **Debug -> Attach to Process**
+		2. Click **Find** and select container under **Auto detected**
+		3. Select the **w3wp.exe** process
+		4. Click **Attach**
 - When you're done, press CTRL+C to stop.
 
 If you do not care about the output from containers you can start in "detached" mode with `docker-compose up -d` and then use `docker-compose stop` or `docker-compose down` to remove everything. 
