@@ -69,7 +69,7 @@ If you do not care about the output from containers you can start in "detached" 
 
 ### Multiple Sitecore instances, load balanced
 
-If you want to try out an loadbalanced environment you should also build:
+If you want to try out an loadbalanced environment you should also build [http://traefik.io](http://traefik.io) for Windows with:
 
 ````
 docker build -t traefik:win .\docker\traefik-win
