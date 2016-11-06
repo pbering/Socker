@@ -39,7 +39,7 @@ docker build -t traefik:win .\docker\traefik-win
 ### Solution
 
 1. Place "license.xml" in `/docker/web/Sitecore/Data`
-2. Place Sitecore databases in `/data`
+2. Place Sitecore databases (from the version your are using) in `/data`
 
 ## Daily usage
 
