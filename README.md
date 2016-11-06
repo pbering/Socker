@@ -42,9 +42,9 @@ docker build -t sitecore:8.1.160519 .\docker\sitecore-81rev160519
 1. Extract "Data" and "Website" from "SSitecore 8.2 rev. 160729.zip" and place them in `/docker/sitecore-82rev160729/Sitecore`
 2. Build private images:
 	
-````
-docker build -t sitecore:8.2.160729 .\docker\sitecore-82rev160729
-````
+	````
+	docker build -t sitecore:8.2.160729 .\docker\sitecore-82rev160729
+	````
 
 3. Change the version number in the FROM statement in "/docker/web/Dockerfile"
 4. Replace "/src/WebApp/Web.config" with the Web.config from "SSitecore 8.2 rev. 160729.zip"
