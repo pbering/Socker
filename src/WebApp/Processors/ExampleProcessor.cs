@@ -4,7 +4,7 @@ using Sitecore.Pipelines.HttpRequest;
 
 namespace WebApp.Processors
 {
-    public class TestProcessor : HttpRequestProcessor
+    public class ExampleProcessor : HttpRequestProcessor
     {
         public override void Process(HttpRequestArgs args)
         {
