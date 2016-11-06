@@ -6,8 +6,8 @@ This repository shows how a solution running Sitecore is wired up for developmen
 
 - Databases is persisted between restarts
 - Project output are automatically synced into running containers when changes are detected
-- Load balancing multiple Sitecore instances
 - Streaming log output
+- Load balancing multiple Sitecore instances
 
 ## Prerequisites
 
