@@ -40,13 +40,9 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 3. Place "license.xml" in `/docker/web/Sitecore/Data`
 4. Place databases from "Sitecore 8.1 rev. 160519.zip" in `/data`
 
-
 <details>
  <summary>**[OPTIONAL] Using another Sitecore version**</summary>
  <p>
-sss
-
-#### [OPTIONAL] Using another Sitecore version
 
 1. Extract "Data" and "Website" from "SSitecore 8.2 rev. 160729.zip" and place them in `/docker/sitecore-82rev160729/Sitecore`
 2. Build private images:
@@ -58,6 +54,7 @@ sss
 3. Change the version number in the **FROM** statement in "/docker/web/Dockerfile"
 4. Replace "/src/WebApp/Web.config" with the Web.config from "Sitecore 8.2 rev. 160729.zip"
 5. Place databases from "Sitecore 8.2 rev. 160729.zip" in `/data`
+
  </p>
 </details>
 
