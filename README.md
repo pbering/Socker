@@ -36,18 +36,19 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
 
 ## Daily usage
 
-- Start containers:
+### Start containers
 
 	````
 	docker-compose build
 	docker-compose up
 	````
 
-- Open Socker.sln:
-	- Build
-	- Open IP of web container in browser (IP is in the compose output or use `docker inspect`).
-	- Add files, edit code, build - watcher script updates the running containers...
-		- Refresh browser, repeat...
+### Open solution
+
+- Build
+- Browse the IP of web container (IP is in the compose output or use `docker inspect`).
+- Add files, edit code, build - watcher script updates the running containers...
+	- Refresh browser, repeat...
 - To debug:
 	1. Open **Debug -> Attach to Process**
 	2. Click **Find** and select container under **Auto detected**
