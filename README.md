@@ -58,7 +58,9 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
  </p>
 </details>
 
-#### [OPTIONAL] Multiple Sitecore instances, load balanced
+<details>
+ <summary>**[OPTIONAL] Multiple Sitecore instances, load balanced**</summary>
+ <p>
 
 If you want to try out an loadbalanced environment you should also build:
 
@@ -67,6 +69,8 @@ docker build -t traefik:win .\docker\traefik-win
 ````
 
 You can then use `docker-compose --file .\docker-compose.scale.yml up` to start your containers.
+ </p>
+</details>
 
 ## Daily usage
 
