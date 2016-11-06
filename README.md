@@ -54,7 +54,7 @@ If you do not care about the output from containers you can start in "detached" 
 
 #### Logs
 
-You can attach to the web containers to watch output from Sitecore logs:
+You can attach to a container to watch output from Sitecore:
 
 ````
 docker exec socker_web_1 powershell C:/Sitecore/Scripts/Stream-Log.ps1
