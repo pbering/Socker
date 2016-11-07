@@ -72,7 +72,7 @@ docker exec socker_web_1 powershell C:/Sitecore/Scripts/Stream-Log.ps1
 ### Using another Sitecore version
 
 1. Copy **Sitecore 8.2 rev. 160729.zip** into **"/images/sitecore-82rev160729"**
-2. Build private images:
+2. Build private image:
 	
 	````
 	docker build -t sitecore:8.2.160729 .\images\sitecore-82rev160729
