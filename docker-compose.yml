@@ -4,7 +4,7 @@ services:
  db:
   image: microsoft/mssql-server-2016-express-windows
   volumes:
-   - .\docker\data:C:\Data 
+   - .\docker\databases:C:\Data 
   environment:
    sa_password: Sitecore+Docker=Socker!
    attach_dbs: "[{'dbName':'Sitecore_Core','dbFiles':['C:\\\\Data\\\\Sitecore.Core.mdf','C:\\\\Data\\\\Sitecore.Core.ldf']},{'dbName':'Sitecore_Master','dbFiles':['C:\\\\Data\\\\Sitecore.Master.mdf', 'C:\\\\Data\\\\Sitecore.Master.ldf']},{'dbName': 'Sitecore_Web', 'dbFiles': ['C:\\\\Data\\\\Sitecore.Web.mdf','C:\\\\Data\\\\Sitecore.Web.ldf']},{'dbName':'Sitecore_Analytics','dbFiles':['C:\\\\Data\\\\Sitecore.Analytics.mdf','C:\\\\Data\\\\Sitecore.Analytics.ldf']}]"   
@@ -14,6 +14,7 @@ services:
   build: .\docker\web
   volumes:
    - .\src\WebApp:C:\Workspace
+   - .\docker\serialization:C:\Sitecore\Data\serialization
   links: 
    - db
   environment:

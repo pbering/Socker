@@ -1,0 +1,1 @@
+Place Sitecore databases from the version you are using here.

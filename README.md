@@ -5,6 +5,7 @@ Is is now possible to run Sitecore completely in Docker natively, you don't have
 This repository shows how a solution running Sitecore is wired up for development with the following features:
 
 - Databases is persisted between restarts
+- Serialized items are also persisted
 - Project output are automatically synced into running containers when changes are detected
 - Remote debugging
 - Streaming log output
@@ -41,7 +42,7 @@ Unfortunately it has to be **private** repositories due to Sitecore licensing te
     ```
 
 1. Copy **license.xml** into **"/docker/web/Sitecore/Data"**
-1. Copy database files from **Sitecore 8.1 rev. 160519.zip** into **"/docker/data"**
+1. Copy database files from **Sitecore 8.1 rev. 160519.zip** into **"/docker/databases"**
 
 ## Daily usage
 
@@ -89,7 +90,7 @@ docker exec socker_web_1 powershell C:/Sitecore/Scripts/Stream-Log.ps1
 
 1. Change the version number in the **FROM** statement in **"/docker/web/Dockerfile"**
 1. Replace **"/src/WebApp/Web.config"** with the **Web.config** from **Sitecore 8.2 rev. 160729.zip**
-1. Copy database files from **Sitecore 8.2 rev. 160729.zip** into **"/docker/data"**
+1. Copy database files from **Sitecore 8.2 rev. 160729.zip** into **"/docker/databases"**
 
 ### Multiple Sitecore instances, load balanced
 
