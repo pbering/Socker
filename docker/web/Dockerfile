@@ -5,7 +5,7 @@ SHELL ["powershell", "-NoProfile", "-Command", "$ErrorActionPreference = 'Stop';
 ADD https://go.microsoft.com/fwlink/?LinkId=615470&clcid=0x409 C:/Sitecore/rtools_setup_x64.exe
 
 RUN C:\Sitecore\rtools_setup_x64.exe /quiet /norestart; \
-    while(ps rtools*) { Start-Sleep -Seconds 5 }; \ 
+    while(ps rtools*) { Start-Sleep -Seconds 5 }; \
     Remove-Item C:\Sitecore\rtools_setup_x64.exe -Force;
     
 ADD Sitecore/ /Sitecore

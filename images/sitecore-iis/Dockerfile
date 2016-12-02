@@ -9,7 +9,7 @@ RUN Add-WindowsFeature Web-Server; \
 
 ADD Sitecore/ /Sitecore
 
-RUN Import-Module IISAdministration; \        
+RUN Import-Module IISAdministration; \
     Import-Module WebAdministration; \
     New-IISSite -Name 'Sitecore' -PhysicalPath 'C:\Sitecore\Website' -BindingInformation '*:80:'; \
     Set-ItemProperty 'IIS:\apppools\DefaultAppPool' -Name 'enable32BitAppOnWin64' -Value 'True'; \

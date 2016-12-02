@@ -16,14 +16,14 @@ This repository shows how a solution running Sitecore is wired up for developmen
 ### Using your local machine as host
 
 - Windows 10 Anniversary update with latest updates
-- Docker for Windows v1.12.3-beta29.3 or later (beta channel: [https://download.docker.com/win/beta/InstallDocker.msi](https://download.docker.com/win/beta/InstallDocker.msi))
+- Docker for Windows v1.13.0-rc2-beta31 or later (beta channel: [https://download.docker.com/win/beta/InstallDocker.msi](https://download.docker.com/win/beta/InstallDocker.msi))
 
 OR
 
 ### Using a remote host (VM, bare iron, Azure, AWS etc.)
 
 - Docker v1.12.3 or later
-- Docker Compose v1.9.0-rc2 or later
+- Docker Compose v1.9.0 or later
 
 ## Preparations
 
