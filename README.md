@@ -90,6 +90,7 @@ docker exec socker_web_1 powershell C:/Sitecore/Scripts/Stream-Log.ps1
 
 1. Change the version number in the **FROM** statement in **"/docker/web/Dockerfile"**
 1. Replace **"/src/WebApp/Web.config"** with the **Web.config** from **Sitecore 8.2 rev. 160729.zip**
+1. Update the package **Sitecore.Kernel.NoReferences** to 8.2.160729 int the WebApp project
 1. Copy database files from **Sitecore 8.2 rev. 160729.zip** into **"/docker/databases"**
 
 ### Multiple Sitecore instances, load balanced
