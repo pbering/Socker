@@ -1,3 +1,5 @@
+> This is an outdated repo, please go to [https://github.com/pbering/SockerVS2017](https://github.com/pbering/SockerVS2017) or [https://github.com/pbering/sitecore-nine-docker](https://github.com/pbering/sitecore-nine-docker)
+
 # Socker = Sitecore :heart: Docker
 
 Is is now possible to run Sitecore completely in Docker natively, you don't have to mess around with databases, IIS or anything, you don't even have to have SQL Server or IIS installed on your machine.
